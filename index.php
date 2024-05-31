@@ -157,4 +157,108 @@ function pattern6($rows) {
 }
 pattern6(5);
 
+
+/*
+
+Pattern 7:
+
+*****
+ ****
+  ***
+   **
+    *                
+
+*/
+
+echo "<h1>Pattern 7</h1>";
+function pattern7($rows) {
+    for($i = $rows; $i >= 1; $i--) {
+        for($j = $rows; $j > $i; $j--) {
+            echo "&nbsp;&nbsp;";
+        }
+
+        for ($k = 1; $k <= $i; $k++) {
+            echo "*";
+        }
+        
+         echo "</br>";
+    }
+}
+pattern7(5);
+
+
+/*
+
+Pattern 8:
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5           
+
+*/
+
+echo "<h1>Pattern 8</h1>";
+function pattern8($rows) {
+    for($i = 1; $i <= $rows; $i++) {
+        for($j = 1; $j <= $i; $j++) {
+            echo $i;
+        }
+         echo "</br>";
+    }
+}
+pattern8(5);
+
+
+/*
+
+Pattern 9:
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15         
+
+*/
+
+
+echo "<h1>Pattern 9</h1>";
+function pattern9($rows, $increment) {
+    for($i = 1; $i <= $rows; $i++) {
+        for($j = 1; $j <= $i; $j++) {
+            echo $increment. " ";
+            $increment ++;
+        }
+         echo "</br>";
+    }
+}
+pattern9(5,1);
+
+
+/*
+
+Pattern 10:
+
+A 
+B B 
+C C C 
+D D D D 
+E E E E E        
+
+*/
+
+echo "<h1>Pattern 10</h1>";
+function pattern10($rows, $character) {
+    for($i = 1; $i <= $rows; $i++) {
+        for($j = 1; $j <= $i; $j++) {
+            echo $character. " ";
+        }
+        $character ++;
+         echo "</br>";
+    }
+}
+pattern10(5,"A");
+
 ?>
